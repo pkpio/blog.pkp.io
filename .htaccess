@@ -1,0 +1,12 @@
+# Always set these headers.
+Header always set Access-Control-Allow-Origin "https://pkp.io"
+Header always set Access-Control-Allow-Methods "GET, OPTIONS"
+Header always set Access-Control-Max-Age "1000"
+Header always set Access-Control-Allow-Headers "Content-Type, origin, accept, If-Modified-Since, Pragma, Cache-Control"
+ 
+# Added a rewrite to respond with a 200 SUCCESS on every OPTIONS request.
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
