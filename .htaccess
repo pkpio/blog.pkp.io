@@ -1,5 +1,5 @@
 # Always set these headers.
-Header always set Access-Control-Allow-Origin "https://pkp.io"
+Header always set Access-Control-Allow-Origin "*"
 Header always set Access-Control-Allow-Methods "GET, OPTIONS"
 Header always set Access-Control-Max-Age "1000"
 Header always set Access-Control-Allow-Headers "Content-Type, origin, accept, If-Modified-Since, Pragma, Cache-Control"
