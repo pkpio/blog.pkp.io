@@ -11,31 +11,34 @@ So, obviously, I set to create a new website for myself, again! The tech landsca
 
 # Ground rules
 I must lay some ground rules before I set my course to coding. These include my final goals, structural choices and consistency. Here are some of them:
-- Responsive
-- Material design
-- Uniformity and consistency
-- Proper dependency management
-- Simple and clean
-- Okay to use plugins
-- Design and data isolation
+
+ - Responsive
+ - Material design
+ - Uniformity and consistency
+ - Proper dependency management
+ - Simple and clean
+ - Okay to use plugins
+ - Design and data isolation
 
 # Techonolgy choices
 After examining some currently popular technologies I arrived at the list below:
-- [AngularJS][angular]
-- [Bower][bower]
-- Angular plugins
-  - [Material][ang-md]
-  - [Timeline][ang-tl]
-  - [Route][ang-route]
-  - [Discuss][discuss]
-  - Typewriter
-- [FontAwesome][fa]
-- [Jekyll][jekyll]
+
+ - [AngularJS][angular]
+ - [Bower][bower]
+ - Angular plugins
+   - [Material][ang-md]
+   - [Timeline][ang-tl]
+   - [Route][ang-route]
+   - [Discuss][discuss]
+   - Typewriter
+ - [FontAwesome][fa]
+ - [Jekyll][jekyll]
 
 # Building 
 [AngularJS][angular] in freaking awesome! Using [Angular material][ang-md] I quickly arrived at a basic template for the website with one dynamic content element - this is the only changing component of the website - consistency and uniformity, remember? 
 
 Once I have a basic template for the site, I just had to make templates for each page - templates because I wanted to maintain isolation between page design and the actual data. Keeping other ground rules in mind, I arrived at below structure for the app.
+
 ```
 root
   |- data                      // user data for each page as JSON files 
