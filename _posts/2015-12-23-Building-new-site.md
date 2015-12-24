@@ -12,19 +12,19 @@ So, obviously, I set to create a new website for myself, again! The tech landsca
 
 Ground rules
 ----------
-I must lay some ground rules before I set my course to coding. These include my final goals, structural choices and consistency. Here are some of them:
+I must lay some ground rules before I set my course to coding. These include architecture choice, code consistency and a few more : 
 
  - Responsive
  - Material design
  - Uniformity and consistency
- - Proper dependency management
+ - Consistent dependency management
  - Simple and clean
- - Okay to use plugins
- - Design and data isolation
+ - Free to use plugins
+ - UI and user data isolation
 
 Techonolgy choices
 ----------
-After examining some currently popular technologies I arrived at the list below:
+After examining a few popular choices, I arrived at the list below:
 
  - [AngularJS][angular]
  - [Bower][bower]
@@ -92,6 +92,21 @@ root
   |- bower.json                 // Bower depedencies. Install these first!
 ```
 
+Everything went well but then I also wanted to have a blog to go along. So, install wordpress, right? - I wish it were that simple but unfortunately not. More on blog setup later.
+
+Blog setup
+------------
+Rules first! A big no to wordpress - I want to be in full control of my blog and it's content. So, my obvious choice would be [Jekyll][jekyll] - a blog aware static site generator. But then I'm also looking for a uniform and consistent integration of this with the exisiting site. So, I would prefer a blog with a simple JSON API but not go so far as wordpress - that would have been easy! 
+
+Luckily, jekyll is very open! I created templates with json structure and html output embedded in the json. Obviously, there was more to it! Here are some additional tweaks, using jekyll plugins, I did to get a blog that supports rich text content :
+
+ - Redcarpet Markdown-HTML convertor
+ - Category indexes
+ - Language specific code blocks
+ - FontAwesome Icons
+
+You may check the [blog source code][blog-src] for more info on this.
+
 [angular]: https://angularjs.org/
 [ang-md]: https://material.angularjs.org/
 [bower]: http://bower.io/
@@ -100,3 +115,5 @@ root
 [discuss]: https://github.com/michaelbromley/angularUtils/tree/master/src/directives/disqus
 [fa]: https://fortawesome.github.io/Font-Awesome/
 [jekyll]: https://jekyllrb.com/
+[blog-src]: https://github.com/praveendath92/blog.pkp.io
+
