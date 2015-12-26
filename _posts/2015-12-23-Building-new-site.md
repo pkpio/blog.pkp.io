@@ -4,7 +4,7 @@ title: Building a responsive personal website from scratch
 categories: [Web, Angular]
 ---
 
-I started to feel quite blasé about the site I use to market myself! It was already 2 years old and that's a long time, especially in tech, to regard something as old and probably obsolete - in comparision to the prevailing! Frankly it's about time that I start catching up with what's {% icon fa-fire %} in Web!
+I started to feel quite blasé about the site I use to market myself! It was already 2 years old and that's a long time, especially in tech, to regard something as old and probably obsolete - in comparision to the prevailing! Frankly it's about time that I start catching up with what's {% icon fa-fire red %} in Web!
 
 No to pre-built templates
 ============
@@ -37,7 +37,7 @@ After examining a few popular choices, I arrived at the list below:
 
 Building 
 ============
-[AngularJS][angular] is freaking awesome! - I'm in {% icon fa-heart %}. Using [Angular material][ang-md] I quickly arrived at a basic template for the website with just one dynamic element - the only changing component of the website - consistency and uniformity, remember? 
+[AngularJS][angular] is freaking awesome! - I'm in {% icon fa-heart red %} Using [Angular material][ang-md] I quickly arrived at a basic template for the website with just one dynamic element - the only changing component of the website - consistency and uniformity, remember? 
 
 Once I have a basic template for the site, I just had to make templates for each page - templates because I wanted to maintain isolation between page design and the actual data. Keeping other ground rules in mind, I arrived at below structure for the app.
 
