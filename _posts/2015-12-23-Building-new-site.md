@@ -4,23 +4,21 @@ title: Building a responsive personal website from scratch
 categories: [Web, Angular, Material]
 ---
 
-I arrived, yet again, at those points of time when the usual bores me. I'm not talking about some adventurous outdoor activity, just the website I have been using to market myself for over 2 years now! That's a long time, especially in tech to consider something as old or probably obsolete - at least in comparision to the prevailing trends!
+I started to feel quite blasé about the site I use to market myself! It was already 2 years old and that's a long time, especially in tech, to regard something as old and probably obsolete - in comparision to the prevailing! Frankly it's about time that I start catching up with what's {% icon fa-fire %} in Web!
 
 No to pre-built templates
 ---------
-So, obviously, I set to create a new website for myself, again! The tech landscape has changed a lot in the last 2 years - especially the attention given to Mobile first or responsive design. I didn't want to use a template that I could buy for a few bucks - part of selling myself stems also from self designed and developed website. A from scratch code gives me immense flexibility in terms of design, architectural choices and a feeling of great satisfaction.
+So, I set to create a new website for myself, again! The tech landscape has changed a lot in the last 2 years - especially the attention given to Mobile first or responsive design. I didn't want to use a pre-built template that I could buy for a few bucks. Part of my online persuasion stems also from the fact that what you see is what I made. A from scratch development gives me immense flexibility in terms of design, architectural choices and a sense of satisfaction.
 
 Ground rules
 ----------
-I must lay some ground rules before I set my course to coding. These include architecture choice, code consistency and a few more : 
+Unlike the times before this, I decided to set some ground rules before I set my course to coding. These include architectural choice and a few more guidelines : 
 
- - Responsive
- - Material design
- - Uniformity and consistency
- - Consistent dependency management
- - Simple and clean
- - Free to use plugins
- - UI and user data isolation
+ - Responsive layout
+ - Simple and clean UI
+ - Consistency in Design and Code
+ - Proper dependency management
+ - UI and Data isolation
 
 Techonolgy choices
 ----------
@@ -39,13 +37,13 @@ After examining a few popular choices, I arrived at the list below:
 
 Building 
 ---------
-[AngularJS][angular] in freaking awesome! Using [Angular material][ang-md] I quickly arrived at a basic template for the website with one dynamic content element - this is the only changing component of the website - consistency and uniformity, remember? 
+[AngularJS][angular] in freaking awesome! - I'm in {% icon fa-heart %}. Using [Angular material][ang-md] I quickly arrived at a basic template for the website with just one dynamic element - the only changing component of the website - consistency and uniformity, remember? 
 
 Once I have a basic template for the site, I just had to make templates for each page - templates because I wanted to maintain isolation between page design and the actual data. Keeping other ground rules in mind, I arrived at below structure for the app.
 
 ```
 root
-  |- data                      // user data for each page as JSON files 
+  |- data                      // User data for each page
   |   |- about.json
   |   |- academics.json
   |   |- intro.json
@@ -92,18 +90,19 @@ root
   |- bower.json                 // Bower depedencies. Install these first!
 ```
 
-Everything went well but then I also wanted to have a blog to go along. So, install wordpress, right? - I wish it were that simple but unfortunately not. More on blog setup later.
+So far so good. Then I also wanted to have a blog to go along. Install wordpress, right? - I wish it were that simple. Anyway, more on blog setup later.
 
 Blog setup
 ------------
-Rules first! A big no to wordpress - I want to be in full control of my blog and it's content. So, my obvious choice would be [Jekyll][jekyll] - a blog aware static site generator. But then I'm also looking for a uniform and consistent integration of this with the exisiting site. So, I would prefer a blog with a simple JSON API but not go so far as wordpress - that would have been easy! 
+Rules first! A big no to wordpress - I want to be in full control of my blog and it's content. So, my obvious choice would be [Jekyll][jekyll] - a blog aware static site generator. But then I'm also looking for a uniform and consistent integration of this with the exisiting site. So, I would prefer a blog with a simple JSON API, because I'm already using JSON for user data, but not go so far as a full wordpress setup - that would have been easy though! 
 
-Luckily, jekyll is very open! I created templates with json structure and html output embedded in the json. Obviously, there was more to it! Here are some additional tweaks, using jekyll plugins, I did to get a blog that supports rich text content :
+Luckily, jekyll is very open! I created templates with JSON structure and HTML output embedded in the JSON. Obviously, there was more to it! Here are some additional tweaks, using jekyll plugins, I did to get a blog that supports rich text content :
 
  - Redcarpet Markdown-HTML convertor
- - Category indexes
- - Language specific code blocks
+ - Category indexes plugin
+ - Language specific code blocking
  - FontAwesome Icons
+ - A few other plugins in Redcarpet itself
 
 You may check the [blog source code][blog-src] for more info on this.
 
