@@ -80,7 +80,7 @@ Rich text features
 
 FontAwesomeIcons
 =========
-FontAwesome icons such as {% icon fa-heart %} {% icon fa-fort-awesome %} {% icon fa-refresh fa-spin %}
+FontAwesome icons such as {% icon fa-heart %} and spinner like {% icon fa-refresh fa-spin %}
 
 
 [jekyll]: https://jekyllrb.com/
