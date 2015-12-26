@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a responsive personal website from scratch
-categories: [Web, Angular, Material]
+categories: [Web, Angular]
 ---
 
 I started to feel quite blasé about the site I use to market myself! It was already 2 years old and that's a long time, especially in tech, to regard something as old and probably obsolete - in comparision to the prevailing! Frankly it's about time that I start catching up with what's {% icon fa-fire %} in Web!
