@@ -1,0 +1,3 @@
+- Security by obscurity is not security
+- Security is only as good as its weakest link
+- 
