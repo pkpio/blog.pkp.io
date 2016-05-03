@@ -23,35 +23,37 @@ Saving user passwords in plain text. This is mostly done by the sites that can e
 This is basically the user's password passed to a one-way function. The basic idea of a hash function is that you get the same output as long as your input remains constant. One-way function implies that, given only the output, you can never reconstruct the input. A quick example : MD5 hash of the plain text "password" is "5f4dcc3b5aa765d61d8327deb882cf99". It's actually quite simply to use this method. Most languages have built-in support to generate hash values for a given input. Some commmon hash functions you could use are MD5 (weak), SHA1 (weak) or SHA-256 (good). Instead of saving passwords, just save SHA256(plain-password) and you would be doing the world a favor by not being stupid!
 
 
-2. Hash + pepper
+2. Hash + Salt
 -------------------------
-Imagine most service saving their passwords as MD5(plaintext). A data leak would allow the attacker to gain access to other services of the user, something we have been trying to avoid. An incremental step here would be to use a pepper (a constant string), as the security community calls it. The idea is that most cryptographic hash functions change their output drastically even for a slightest change of input. For example : 
+Now imagine an attacker with a big list of commonly used passwords and their MD5 hash - it's actually very easy to get [such a list][common-passwords]. If such an attacker gets hold of your database, all your users with trivial passwords will be exposed - yes, it's too bad the user used a weak password but nevertheless, we wouldn't want the attackers to find out that someone is using a trivial password! The good news is that MD5 or any good hash function, changes significantly even for a slightest change of input.
 
 ```
 md5(password) = 5f4dcc3b5aa765d61d8327deb882cf99
 md5(password1) = 7c6a180b36896a0a8c02787eeafb0e4c
 
 ```
-The idea here is to save hash(plain-text+pepper) in the database. Pepper could be any string that is unique to your service. As long as you are using the same approach at registration and login, you are good. The login and register scripts could look like :
+The idea here is to save hash(plain-text+salt) in the database. Salt would be a randomly generated string per user. The login and register scripts could look like :
 
 ```java
-pepper = "MY_SECRET_PEPPER_FOR_SITE";
-
 Boolean register(username, password){
-   hash = md5(password+pepper)
-   return saveInDb(username, hash);
+   salt = generateRandomSalt();
+   hash = md5(password+salt)
+   return saveInDb(username, salt, hash);
 }
+
 Boolean login(username, password){
+   salt = getDbSalt(username);
    hash = getDbHash(username);
-   return md5(password+pepper) == hash;
+   return md5(password+salt) == hash;
 }
 
 ```
+This makes it harder for the attacker to find out trivial passwords since each user's password is appended with a random and different salt before hashing.
 
 
 3. Hash + salt + pepper
 ------------------------
-One argument against just using pepper approach is that, imagine an attacker who has a list of common passwords - it's actually very easy to get [such a list][common-passwords], and has also gained access to the pepper. The attacker can now do a hash(plaintext+pepper) over the entire list and now they would know who among your users are using a weak password. The point being, it's easy for an attacker to do a mass password hijack with minimal computational effort - hashing is an expensive operation BTW. So, the next increment is to use a random salt for each user to make it harder for an attacker who gained access to pepper as well - usually pepper is not stored in the database. You would be saving hash(plaintext + pepper + salt), salt in your database. Note that you will have to save the salt as well, since this is unique to each user. Your register and login scripts may look like :
+One argument against just using pepper approach is that, imagine an attacker who has a list of common passwords, and has also gained access to the pepper. The attacker can now do a hash(plaintext+pepper) over the entire list and now they would know who among your users are using a weak password. The point being, it's easy for an attacker to do a mass password hijack with minimal computational effort - hashing is an expensive operation BTW. So, the next increment is to use a random salt for each user to make it harder for an attacker who gained access to pepper as well - usually pepper is not stored in the database. You would be saving hash(plaintext + pepper + salt), salt in your database. Note that you will have to save the salt as well, since this is unique to each user. Your register and login scripts may look like :
 
 ```java
 Boolean register(username, password){
