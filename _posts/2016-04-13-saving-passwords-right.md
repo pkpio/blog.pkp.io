@@ -51,11 +51,13 @@ Boolean login(username, password){
 This makes it harder for the attacker to find out trivial passwords since each user's password is appended with a random and different salt before hashing.
 
 
-3. Hash + salt + pepper
+3. Hash + Salt + Pepper
 ------------------------
-One argument against just using pepper approach is that, imagine an attacker who has a list of common passwords, and has also gained access to the pepper. The attacker can now do a hash(plaintext+pepper) over the entire list and now they would know who among your users are using a weak password. The point being, it's easy for an attacker to do a mass password hijack with minimal computational effort - hashing is an expensive operation BTW. So, the next increment is to use a random salt for each user to make it harder for an attacker who gained access to pepper as well - usually pepper is not stored in the database. You would be saving hash(plaintext + pepper + salt), salt in your database. Note that you will have to save the salt as well, since this is unique to each user. Your register and login scripts may look like :
+The previous approach definitely makes it very hard and expensive - in terms of computation, for attackers to isolate users with weak passwords. However, for a small user base, this won't be the case. Also, the attacker could also target a particular set of users without much effort. Long story short, the previous approach just made things harder, not impractical. This is because, the attacker has access to both hash and the salt. So, obviously the next step is to throw in another secret into the hash function - a secret that is not stored in the database, unlike the salt. Since this won't be stored in the same database, we will keep it same for all users and keep it a secret - a secret of your login service, stored in your code or production servers. Anywhere but the same database as user info. With this, your login and register scripts could look like:
 
 ```java
+pepper = "My-Secret-Pepper in codebase here"
+
 Boolean register(username, password){
    salt = generateRandomSalt();
    hash = md5(password+salt+pepper)
