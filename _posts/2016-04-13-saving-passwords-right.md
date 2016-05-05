@@ -79,9 +79,9 @@ The security of your system also depends on the type of hash function you use. T
 
 Upgrading your security design
 -----------------------------
-Imagine you saved all passwords as md5(password+salt+pepper) and now would like to change it to something like sha256(password+pepper+salt) or md5(password+salt+newpepper). An upgrade plan could look like :
+Imagine you saved all passwords as ```md5(password+salt+pepper)``` and now would like to change it to something like ```sha256(password+salt+pepper)``` or ```md5(password+salt+newpepper)``` - because you suspect that your old pepper isn't a secret anymore! An upgrade plan could look like :
 
- 1. For each user, compute sha(_md5(password+salt+pepper)_+salt+pepper)
+ 1. For each user, compute ```sha(_md5(password+salt+pepper)_+salt+pepper)```
  2. Update login and register scripts as below
 
 ```java
@@ -114,7 +114,7 @@ Boolean login(username, password){
 As you upgrade over time, you will have more layers in the hash function. Fun fact : Facebook does something similar with half a dozen layers, they are calling it [The Onion][fb-the-onion]
 
 
-Note
+FYI
 -----------------
 There are more sophisticated ways of protection besides the above. Such as : Using [Secure multi-party computation][Secure_multi-party_computation], Isolated Key servers etc. 
 
