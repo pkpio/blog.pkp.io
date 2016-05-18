@@ -1,6 +1,6 @@
 ---
 layout: post
-title : Saving passwords in database - the good way
+title : Saving passwords in database
 categories : [Backend, Security, Database]
 ---
 
