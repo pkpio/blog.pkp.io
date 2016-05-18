@@ -4,7 +4,7 @@ title : Saving passwords in database - the good way
 categories : [Backend, Security, Database]
 ---
 
-We have been victimns of one massive database hijack or the other and if your answer to the previous rhetoric was a no, headout for a quick safety-check for these major data breaches that happened at [Adobe][adobe-hack], [Linkedin](linkedin-hack), [eHarmony](eHarmony-hack) and so it goes.
+We have all been victimns of one massive database hijack or the other and if your answer to the previous rhetoric was a no, headout for a quick safety-check for these major data breaches that happened at [Adobe][adobe-hack], [Linkedin](linkedin-hack), [eHarmony](eHarmony-hack) and so it goes.
 
 Given the current state of attacks, the logical and sound approach while designing your database - more importantly about how you handle the storage of user passwords, should be in such a way that it reveals no information about a user's actual password. Especially since password reuse is a very common issue.
 
@@ -53,7 +53,7 @@ This makes it harder for the attacker to find out trivial passwords since each u
 
 3. Hash + Salt + Pepper
 ------------------------
-The previous approach definitely makes it very hard and expensive - in terms of computation, for attackers to isolate users with weak passwords. However, for a small user base, this won't be the case. Also, the attacker could also target a particular set of users without much effort. Long story short, the previous approach just made things harder, not impractical. This is because, the attacker has access to both hash and the salt. So, obviously the next step is to throw in another secret into the hash function - a secret that is not stored in the database, unlike the salt. Since this won't be stored in the same database, we will keep it same for all users and keep it a secret - a secret of your login service, stored in your code or production servers. Anywhere but the same database as user info. With this, your login and register scripts could look like:
+The previous approach definitely makes it very hard and expensive - in terms of computation, for attackers to isolate users with weak passwords. However, for a small user base, this won't be the case. Also, the attacker could also target a particular set of users without much effort. Long story short, the previous approach just made things harder, not impractical. This is because, the attacker has access to both hash and the salt. So, obviously the next step is to throw in another secret into the hash function - a secret that is not stored in the database, unlike the salt. Let's call this Pepper and this will be same for all users - a secret of your login service. Could be stored in your code or production servers. Anywhere but the same database as user info. With this inclusion, your login and register scripts could look like:
 
 ```java
 pepper = "My-Secret-Pepper in codebase here"
@@ -81,7 +81,7 @@ Upgrading your security design
 -----------------------------
 Imagine you saved all passwords as ```md5(password+salt+pepper)``` and now would like to change it to something like ```sha256(password+salt+pepper)``` or ```md5(password+salt+newpepper)``` - because you suspect that your old pepper isn't a secret anymore! An upgrade plan could look like :
 
- 1. For each user, compute ```sha(_md5(password+salt+pepper)_+salt+pepper)```
+ 1. For each user, compute ```sha256(md5(password+salt+pepper)+salt+pepper)```
  2. Update login and register scripts as below
 
 ```java
@@ -97,7 +97,7 @@ Boolean login(username, password){
    return md5(password+salt+pepper) == hash;
 }
 
-// New scripts
+// New scripts - notice the layers in hashing!
 Boolean register(username, password){
    salt = generateRandomSalt();
    hash = sha1(md5(password+salt+pepper)+salt+pepper);
@@ -106,7 +106,7 @@ Boolean register(username, password){
 Boolean login(username, password){
    salt = getDbSalt(username);
    hash = getDbHash(username);
-   return sha1(md5(password+salt+pepper)+salt+pepper) == hash;
+   return sha256(md5(password+salt+pepper)+salt+pepper) == hash;
 }
 
 ```
