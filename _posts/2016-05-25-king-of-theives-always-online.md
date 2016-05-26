@@ -12,29 +12,23 @@ This involves interacting with the game in an automated manner - basically touch
 
 ```bash
 while true; do
-adb shell input tap 139 1371
-sleep 10
+adb shell input tap 1024 1076
+sleep 3
+adb shell input tap 945 812
+sleep 3
 done
 ```
 
-Requirements
------------
-1. Android device - duh!
-2. PC - Linux / Mac. Windows works too, ask me how
-3. ADB tools installed on the PC
-4. USB debugging enabled on Phone
-
-
-Find the touch point
------------
-1. Enable ```Developer options --> Show pointer location```
-2. Launch King of Thieves app, select ```attack``` and then hold the ```castle icon``` at bottom left
-3. Update ```x and y``` positions in the second line of the script above
 
 How to use?
 ----------
-1. Plugin the phone to PC
-2. Run the script and goto sleep :)
+1. Install [Android Debug Bridge][adb] on PC
+2. Enable USB Debugging on phone and connect to PC
+3. Run the script and goto sleep :)
 
+
+Customization
+---------
+You can also choose your own touch points. Just enable ```Developer options --> pointer location" and launch King of Thieves to find the touch point co-ordinates for lines 2 and 4 in the script.
 
 [adb]: https://developer.android.com/studio/command-line/adb.html
