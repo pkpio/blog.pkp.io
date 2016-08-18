@@ -8,7 +8,7 @@ description: This is my blog that is built by generating json files from markdow
 author: Praveen Kumar
 
 # Your email 
-author_email: m@praveen.xyz
+author_email: mail@pkp.io
 
 # The directory for category index pages
 category_dir: category/
@@ -20,10 +20,10 @@ category_dir: category/
 baseurl: 
 
 # The URL of your actual domain.
-url: https://blog.pkp.io
+url: http://blog.pkp.io
 
 # Destination url
-destination: public_html/
+destination: www/
 
 #### Under the Hood Stuff #####
 # Markdown settings
@@ -43,5 +43,5 @@ permalink: /:year/:month/:title/
 #paginate: 5
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [package.json, node_modules]
+exclude: [package.json, node_modules, app.yaml]
 
