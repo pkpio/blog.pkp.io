@@ -3,8 +3,18 @@ api_version: 1
 threadsafe: true
 
 handlers:
-  - url: /
-    static_dir: www/
+  - url: /posts.json
+    static_files: www/posts.json
+    upload: www/posts.json
+    http_headers:
+      Access-Control-Allow-Origin: '*'
+      Access-Control-Allow-Methods: 'GET, OPTIONS'
+      Access-Control-Max-Age: '1000'
+      Access-Control-Allow-Headers: 'Content-Type, origin, accept, If-Modified-Since, Pragma, Cache-Control'
+
+  - url: /(.*)?
+    static_files: www/\1index.html
+    upload: www/(.*)index.html
     http_headers:
       Access-Control-Allow-Origin: '*'
       Access-Control-Allow-Methods: 'GET, OPTIONS'
