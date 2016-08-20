@@ -14,6 +14,9 @@ handlers:
       Access-Control-Max-Age: '1000'
       Access-Control-Allow-Headers: 'Content-Type, origin, accept, If-Modified-Since, Pragma, Cache-Control'
 
+  - url: /assets
+    static_dir: www/assets/
+
   - url: /(.*)?
     static_files: www/\1index.html
     upload: www/(.*)index.html
