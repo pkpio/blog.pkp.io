@@ -1,7 +1,7 @@
 ---
 layout: post
 title : Syncing all Fitbit data to Google Fit
-categories : [Hack, Python, APIs]
+categories : [Python, Hack]
 ---
 
 I love Fitbit trackers. They promise to do just one thing - quantifying self, and they live up to it! Just like most people, I tracked my lifelogs using mobile apps before Fitbit came along. More specifically, I'm talking about Google Fit - an open ecosystem for fitness data. When I finally moved to a dedicated tracking device, Fitbit Flex at first and then to Charge HR, I noticed that there is no way to sync Fitbit data with Google Fit or any other third-party services. While Fitbit itself has a nice ecosystem of tools, graphs, badges and a social component, the fact that I cannot move "my data" around bothers me - I guess I was hoping for Fitbit to be more of a "hardware" company and let users export their data to third-party apps. In all fairness, Fitbit has an API to read all data for an account so, in theory we can build tool to automate the process. Well, it's theory no more!
