@@ -89,6 +89,13 @@ Note :
 - This opens a popup in the browser. Authenticate and done!
 
 
+Video setup
+-----------
+For those of you on Windows and not so command line savvy, here's a video demo of the setup process on Windows.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h-hhZwigyXs" frameborder="0" allowfullscreen></iframe>
+
+
 # Usage
 ------------
 Start the sync using ```python3 app.py```
