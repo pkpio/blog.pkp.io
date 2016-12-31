@@ -30,6 +30,6 @@ Okay, clearly this is a nerdy goal to place in personal section of resolutions b
 ==More clubs, pubs and social events?==
 Well, I really haven't thought about this one yet. I want to be realistic with my goals so, I'm not going to put any social resolutions for the upcoming year - doesn't have to mean I would be anti social! I do want to learn Forró or some other kind dance but yeah, not a hard goal!
 
-I'm excited about the unknown and the possibilities it has in store. **Optimistically welcoming 2017! {% icon fa-hand-spock-o %} **
+I'm excited about the unknown and the possibilities it has in store. <i>Optimistically welcoming 2017! {% icon fa-hand-spock-o %}</i>
 
 [ml-ceti]: https://www.coursera.org/account/accomplishments/records/4WVF3KTLMBYJ
