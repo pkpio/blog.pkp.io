@@ -8,7 +8,7 @@ After a series of interviews, I received a full time offer from MS a few weeks a
 
 The Boilerplate
 ----
-This is some typical boilerplate that almost all coding interview guides talk about. I will spare you the details as most of it can be found in "Cracking a Coding Interview by Gayle L.". That was the single reference I followed while making my CV, and preparing for behavioural aspects during an interview. Long story short, read it all and re-read it, at least the important aspects, before each interview. Been there, done that and can't stress enough how helpful it has been.
+Any sensible post about preparing for a job interview will discuss about making a killer CV, applying through references, quantifying your specific contributions in your previous jobs/projects, not showing up too late or too soon for an interview, and so it goes. I figured, might as well get this over with, because frankly, they are not wrong - for most part. They may be boilerplate suggestions but they are not wrong, and I myself followed most of it as discussed in "Cracking a Coding Interview by Gayle L.". Instead of quoting things from the book, I strongly advice that you go over it once and then again before each interview - been there, done that and helped me a ton! I can't stress this enough but just so you know, the last thing I did before most of my interviews, Microsoft one included, was to go over some bookmarks I added in that book. Quantifying your contributions is good thing and applying through references definitely puts you in a better position than otherwise.
 
 
 
