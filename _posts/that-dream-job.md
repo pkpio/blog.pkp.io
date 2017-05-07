@@ -26,3 +26,8 @@ This goes without saying but I’m going to say it anyway: Practice makes you pe
 
 Interview
 ----
+
+
+Offer or Not
+----
+We are all smart enough to know what to do after receiving an offer - act like you have been through anything and everything, and probably write another blog post such as this. Now let’s talk about the unpleasant alternative. Rejection isn’t a bad thing in itself but, not analysing why that happened is definitely one of the worst things you could do about it! As the popular saying goes, “Learn from your mistakes” - and just so you know, it’s not always you! I’m not the one to keep count but I was rejected by Blah for not being proficient at socket and low-latency communications, Bunq for underperforming in their aptitude test designed to identify candidates who are a better fit for developing banking applications, and Optiver for insufficient performance in their coding test - okay, I kept count! As long as you figure out why you were rejected, you are on the right path. Of course, you don’t have to always act on it - for instance, low-latency networking applications isn’t something I’m good at or looking forward to at the moment, however, doing bad on the Optiver test was purely lack of time allocation skill on my part - that’s something to work up on and the former, not so much. 
