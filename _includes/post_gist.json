@@ -4,5 +4,6 @@
   "categories" : {{ post.categories | jsonify }},
   "url"        : {{ post.url | jsonify }},
   "date"       : {{ post.date | jsonify }},
+  "readtime"   : {{ post.content | number_of_words | divided_by:180 | jsonify}},
   "excerpt"    : {{ post.content | strip_html | truncatewords : 30, ' [...]' | jsonify }}
 }
