@@ -4,7 +4,7 @@ title : Cracking that coding interview
 categories : [Personal]
 ---
 
-After a series of interviews, I received a full time offer from MS a few weeks ago. To my own surprise, the interviews actually turned out to be a fun exercise - especially since I was worried about various ways to screw it up. And now, I want to talk all about the "hardship" that lead up to the offer. This will be a highly opinionated post depicting what worked for *me*.
+After a series of interviews, I received a full time offer from Microsoft a few weeks ago. To my own surprise, the interviews actually turned out to be a fun exercise - especially since I was worried about various ways to screw it up. Now I want to talk all about the "hardship" that lead up to the offer. This will be a highly opinionated post depicting what worked for *me*.
 
 
 The Boilerplate
@@ -36,4 +36,7 @@ You are smart enough to know what to do when you receive an offer - act like you
 
 Credits
 ----
-You have reached the end of our pep talk. I would like to thank all my friends and family, who supported me during this arduous process - for keeping me motivated, expressing your belief in me more than I did myself, and last but not least, helping me draft and proof-read those "Letters of Motivation" - writing these was definitely the most unpleasent part. In particular, Sabareesh, Sampath, Uday, and Sanath, couldn't have done this without you! 
+You have reached the end of our pep talk. I would like to thank all my friends and family, who supported me during this arduous process - for keeping me motivated, expressing your belief in me more than I did myself, and last but not least, helping me draft and proof-read those "Letters of Motivation" - writing these was definitely the most unpleasent part. In particular, Sabareesh, Sampath, Uday, and Sanath, couldn't have done this without you!
+
+
+If you made it this far without skimming over, you must be serious! - that's a great sign, keep it going! Good luck {% icon fa-thumbs-o-up %}
