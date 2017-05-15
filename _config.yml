@@ -34,7 +34,7 @@ jekyll-crosspost_to_medium:
   cache: .jekyll-crosspost_to_medium
   status: public
   license: all-rights-reserved
-  text: '<p><i>This article was originally posted on <a href="http://pkp.io/blog">my blog</a>.</i></p>'
+  text: '<p><i>This article was originally posted on <a href="{{ url }}">my blog</a>.</i></p>'
   backdate: true
 
 
