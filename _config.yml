@@ -20,10 +20,23 @@ category_dir: category/
 baseurl: 
 
 # The URL of your actual domain.
-url: http://blog.pkp.io
+url: http://pkp.io/blog/
 
 # Destination url
 destination: www/
+
+# Cross posting to medium
+gems:
+  - jekyll-crosspost-to-medium
+
+jekyll-crosspost_to_medium:
+  enabled: true
+  cache: .jekyll-crosspost_to_medium
+  status: public
+  license: all-rights-reserved
+  text: '<p><i>This article was originally posted on <a href="http://pkp.io/blog">my blog</a>.</i></p>'
+  backdate: true
+
 
 #### Under the Hood Stuff #####
 # Markdown settings
