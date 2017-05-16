@@ -1,3 +1,10 @@
+---
+layout: post
+title: How I got 200 stars on Github 
+categories: [Tech]
+crosspost_to_medium: false
+---
+
 I just received my first 100+ stars for one of my personal projects, [fitbit-googlefit](https://github.com/praveendath92/fitbit-googlefit), on Github. This gave me a good reason to talk a little bit about how it got there. Before we begin, here are the latest numbers:
 
 <center>
