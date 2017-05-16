@@ -27,4 +27,4 @@ star the repository : https://github.com/praveendath92/fitbit-googlefit
 ```
 Posted about the tool on XDA and other places where people already requested for this. Answered any queries from users promptly and even went on to make a Youtube video to demonstrate the setup for Windows users. Overall, it was more work than what I had initially expected but as the star count kept raising, it kept me motivated to keep the support going and fixing any bugs reported through issues. 
 
-Obviously, all this has no tangible impact on me - monetary or otherwise, but in my opinion, having a popular repository earns some kind respect for developer and positive first opinion about their skill. The lack of it, however, doesn’t imply the contrary.
+Obviously, all this has no tangible impact on me - monetary or otherwise, but in my opinion, having a popular repository earns some kind respect for developer and a positive first opinion about their skill. The lack of it, however, doesn’t imply the contrary.
