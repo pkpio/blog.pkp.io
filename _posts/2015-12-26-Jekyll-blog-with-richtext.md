@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A jekyll blog with rich text support
-categories: [Web, Jekyll]
+categories: [Tech]
 ---
 
 Tl;dr : This is show down of the rich text features supported by the [Jekyll][jekyll] blog setup as you see right now.

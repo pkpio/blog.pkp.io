@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a responsive personal website from scratch
-categories: [Web, Angular]
+categories: [Tech, Personal]
 crosspost_to_medium: true
 ---
 

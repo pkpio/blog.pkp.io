@@ -1,7 +1,7 @@
 ---
 layout: post
 title : New year resolutions 2017
-categories : [Personal, Goals]
+categories : [Personal]
 ---
 
 Just a few more hours and all things 2016 will be history. While I'm not into the custom of writing year end notes and public resolutions for upcoming year, I like to make an exception here - there's always a first, right? If I were to speak my thoughts spontaneously, 2016 hasn't been a great year for me - I hate to go into the reasons but needless to say that it's been one of the "slowest years"!

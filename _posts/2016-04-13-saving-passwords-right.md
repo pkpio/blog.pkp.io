@@ -1,7 +1,7 @@
 ---
 layout: post
 title : Saving passwords in database
-categories : [Backend, Security, Database]
+categories : [Tech]
 ---
 
 We have all been victimns of one massive database hijack or the other and if your answer to the previous rhetoric was a no, headout for a quick safety-check for these major data breaches that happened at [Adobe][adobe-hack], [Linkedin](linkedin-hack), [eHarmony](eHarmony-hack) and so it goes.

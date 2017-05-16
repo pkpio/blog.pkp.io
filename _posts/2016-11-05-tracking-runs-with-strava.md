@@ -1,7 +1,7 @@
 ---
 layout: post
 title : Tracking runs using Strava
-categories : [Fitness, Endless]
+categories : [Personal]
 ---
 Fitbit is still fantastic for my fitness tracking needs but unfortunately many of my fitness pals are not on Fitbit, yet or maybe never! The good news however is many of them use Strava for activity tracking and Fitbit has a very good Strava integration - although limited only for runs and probably biking. 
 

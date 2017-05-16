@@ -1,7 +1,7 @@
 ---
 layout: post
 title : Staying online 24x7 in King of Thieves - Android Auto Touch
-categories : [Android, Hack]
+categories : [Tech]
 ---
 
 This would be my first "own hack" for a game / app. I guess this is the kind of the things one would do when they are insomniac and hooked onto something.

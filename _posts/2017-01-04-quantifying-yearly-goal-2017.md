@@ -1,7 +1,7 @@
 ---
 layout: post
 title : Quantifying yearly fitness goal
-categories : [Goals, Fitness, Hack]
+categories : [Tech, Personal]
 ---
 I was deeply convinced that regular progress tracking is a crucial step towards achieving my fitness goal for 2017. So, I created a  simple tool which extracts my runs from Fitbit data and the final results looks like this. All y-units are in Kilometres.
 
