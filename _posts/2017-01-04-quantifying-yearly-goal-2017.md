@@ -5,7 +5,7 @@ categories : [Tech, Personal]
 ---
 I was deeply convinced that regular progress tracking is a crucial step towards achieving my fitness goal for 2017. So, I created a  simple tool which extracts my runs from Fitbit data and the final results looks like this. All y-units are in Kilometres.
 
-<center><iframe height='940px' width='800px' frameborder='0' allowtransparency='true' scrolling='no' src='http://fitgoal.pkp.io' ></iframe></center>
+<center><iframe height='940px' width='800px' frameborder='0' allowtransparency='true' scrolling='no' src='https://fitgoal.herokuapp.com/' ></iframe></center>
 
 Basically it retrieves all Fitbit activities logged after 1st January 2017 and filters only "Run" activities - since the goal is to cover 1000 Kilometres over the year in running. The tool exports the cumulative distance for each day since January 1st in ```distance.json``` file. The web application uses data from this file to build a graph as shown above. This graph is auto-updated with latest data at the top of every hour. 
 
