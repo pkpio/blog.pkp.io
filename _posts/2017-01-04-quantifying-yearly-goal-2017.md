@@ -5,7 +5,7 @@ categories : [Tech, Personal]
 ---
 I was deeply convinced that regular progress tracking is a crucial step towards achieving my fitness goal for 2017. So, I created a  simple tool which extracts my runs from Fitbit data and the final results looks like this. All y-units are in Kilometres.
 
-<center><iframe height='940px' width='800px' frameborder='0' allowtransparency='true' scrolling='no' src='http://fitgoal.herokuapp.com/graphs/347TCH'></iframe></center>
+<center><iframe height='940px' width='800px' frameborder='0' allowtransparency='true' scrolling='no' src='https://fitgoal.pkp.io/graphs/347TCH'></iframe></center>
 
 Basically it retrieves all Fitbit activities logged on or after 1st January 2017 and filters only "Run" and "Bike" activities - the goal is to cover 1000 Kilometres over the year.
 
