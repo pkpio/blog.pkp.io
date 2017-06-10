@@ -20,7 +20,7 @@ category_dir: category/
 baseurl: 
 
 # The URL of your actual domain.
-url: http://pkp.io/blog/
+url: https://blog.pkp.io
 
 # Destination url
 destination: www/
